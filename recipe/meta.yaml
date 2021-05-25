@@ -1,18 +1,18 @@
 {% set name = "sphinx-external-toc" %}
-{% set version = "0.1.0" %}
+{% set version = "0.2.0" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz"
-  sha256: 5ce1aca01365e7523c1864541e2f19d5aa850acae51d4777fdb49566430f94ed
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 7a7b9de1a0326ef8bef213db7c74ed24c5e951520d0ea8ba63ab532dbe3097f4
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - sphinx-etoc = sphinx_external_toc.cli:main
 
@@ -32,16 +32,16 @@ test:
   imports:
     - sphinx_external_toc
   commands:
-   - pip check
+    - pip check
 
 about:
-  home: "https://github.com/executablebooks/sphinx-external-toc"
+  home: https://github.com/executablebooks/sphinx-external-toc
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: "A sphinx extension that allows the site-map to be defined in a single YAML file."
-  doc_url: "https://sphinx-external-toc.readthedocs.io"
-  dev_url: "https://github.com/executablebooks/sphinx-external-toc"
+  summary: A sphinx extension that allows the site-map to be defined in a single YAML file.
+  doc_url: https://sphinx-external-toc.readthedocs.io
+  dev_url: https://github.com/executablebooks/sphinx-external-toc
 
 extra:
   recipe-maintainers:
