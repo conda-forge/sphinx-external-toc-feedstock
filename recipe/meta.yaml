@@ -21,11 +21,11 @@ requirements:
     - pip
     - python >=3.6
   run:
-    - attrs >=19.2,<21
+    - attrs >=19.2,<22
     - click >=7.1,<8
     - python >=3.6
     - pyyaml
-    - sphinx >=3,<4
+    - sphinx >=3,<5
 test:
   requires:
     - pip
