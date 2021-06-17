@@ -1,5 +1,5 @@
 {% set name = "sphinx-external-toc" %}
-{% set version = "0.2.0" %}
+{% set version = "0.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 7a7b9de1a0326ef8bef213db7c74ed24c5e951520d0ea8ba63ab532dbe3097f4
+  sha256: 75aa42b73fe0fbc201e63168c3b0273f4bb573a213c5fc4f95f2113dca9ce333
 
 build:
   number: 0
@@ -21,11 +21,11 @@ requirements:
     - pip
     - python >=3.6
   run:
-    - attrs >=19.2,<21
+    - attrs >=19.2,<22
     - click >=7.1,<8
     - python >=3.6
     - pyyaml
-    - sphinx >=3,<4
+    - sphinx >=3,<5
 test:
   requires:
     - pip
