@@ -21,7 +21,6 @@ requirements:
     - pip
     - python >=3.6
   run:
-    - attrs >=20.3,<22
     - click >=7.1,<9
     - python >=3.6
     - pyyaml
