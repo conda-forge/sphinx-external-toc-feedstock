@@ -148,4 +148,5 @@ Feedstock Maintainers
 =====================
 
 * [@choldgraf](https://github.com/choldgraf/)
+* [@rxm7706](https://github.com/rxm7706/)
 
