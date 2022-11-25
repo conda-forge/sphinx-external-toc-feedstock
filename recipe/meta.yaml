@@ -1,5 +1,5 @@
 {% set name = "sphinx-external-toc" %}
-{% set version = "0.2.4" %}
+{% set version = "0.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: f073c482d959a166f844ca8caadd13e24fa43153750cc120646ded37ff622018
+  sha256: 9c8ea9980ea0e57bf3ce98f6a400f9b69eb1df808f7dd796c9c8cc1873d8b355
 
 build:
   number: 0
