@@ -1,11 +1,11 @@
-About sphinx-external-toc
-=========================
+About sphinx-external-toc-feedstock
+===================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/sphinx-external-toc-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/executablebooks/sphinx-external-toc
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/sphinx-external-toc-feedstock/blob/main/LICENSE.txt)
 
 Summary: A sphinx extension that allows the site-map to be defined in a single YAML file.
 
