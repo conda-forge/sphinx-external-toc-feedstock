@@ -10,7 +10,7 @@ source:
   sha256: 9c8ea9980ea0e57bf3ce98f6a400f9b69eb1df808f7dd796c9c8cc1873d8b355
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
@@ -22,11 +22,10 @@ requirements:
     - python >=3.7
     - flit-core >=3.4,<4
   run:
-    - attrs >=20.3,<22
     - click >=7.1,<9
-    - python >=3.6
+    - python >=3.7
     - pyyaml
-    - sphinx >=3,<5
+    - sphinx >=3,<6
 test:
   requires:
     - pip
