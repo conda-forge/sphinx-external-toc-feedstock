@@ -12,27 +12,28 @@ source:
 build:
   number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   entry_points:
     - sphinx-etoc = sphinx_external_toc.cli:main
 
 requirements:
   host:
-    - pip
-    - python >=3.7
+    - python >=3.9
     - flit-core >=3.4,<4
-  run:
-    - click >=7.1,<9
-    - python >=3.7
-    - pyyaml
-    - sphinx >=4,<6
-test:
-  requires:
     - pip
+  run:
+    - python >=3.9
+    - click >=7.1
+    - pyyaml
+    - sphinx >=5
+test:
   imports:
     - sphinx_external_toc
   commands:
     - pip check
+    - sphinx-etoc --help
+  requires:
+    - pip
 
 about:
   home: https://github.com/executablebooks/sphinx-external-toc
