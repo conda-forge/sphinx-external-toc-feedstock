@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
   sha256: a7d2c63cc47ec688546443b28bc4ef466121827ef3dc7bb509de354bad4ea2e0
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   entry_points:
@@ -18,11 +18,11 @@ build:
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}
     - flit-core >=3.4,<4
     - pip
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - click >=7.1
     - pyyaml
     - sphinx >=5
@@ -34,6 +34,7 @@ test:
     - sphinx-etoc --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/executablebooks/sphinx-external-toc
